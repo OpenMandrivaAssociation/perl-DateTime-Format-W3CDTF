@@ -1,7 +1,7 @@
 %define module	DateTime-Format-W3CDTF
 %define name	perl-%{module}
 %define version	0.04
-%define release %mkrel 2
+%define release %mkrel 3
 
 Name:		%{name}
 Version:	%{version}
