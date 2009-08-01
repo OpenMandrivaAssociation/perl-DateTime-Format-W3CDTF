@@ -1,20 +1,19 @@
-%define module	DateTime-Format-W3CDTF
-%define name	perl-%{module}
-%define version	0.04
-%define release %mkrel 6
+%define upstream_name	 DateTime-Format-W3CDTF
+%define upstream_version 0.04
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Parse and format W3CDTF datetime strings
 License:	GPL
 Group:		Development/Perl
-Source:		%{module}-%{version}.tar.bz2
 Url:		http://search.cpan.org/dist/RPM4/
-Buildroot:	%{_tmppath}/%{name}-root
-Requires:	perl
-BuildArch: noarch
+Source0:	%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires: perl(DateTime)
+BuildArch: noarch
+Buildroot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module understands the W3CDTF date/time format, an ISO 8601 profile,
@@ -25,7 +24,7 @@ It can be used to parse these formats in order to create the appropriate
 objects.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -46,5 +45,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %{perl_vendorlib}/*
 %{_mandir}/*/*
-
-
