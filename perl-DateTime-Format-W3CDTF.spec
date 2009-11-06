@@ -1,5 +1,5 @@
 %define upstream_name	 DateTime-Format-W3CDTF
-%define upstream_version 0.04
+%define upstream_version 0.05
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -9,7 +9,7 @@ Summary:	Parse and format W3CDTF datetime strings
 License:	GPL
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/RPM4/
-Source0:	%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires: perl(DateTime)
 BuildArch: noarch
