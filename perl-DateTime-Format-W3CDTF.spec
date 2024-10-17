@@ -8,7 +8,7 @@ Release:	5
 Summary:	Parse and format W3CDTF datetime strings
 License:	GPL
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/RPM4/
+Url:		https://search.cpan.org/dist/RPM4/
 Source0:	%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
