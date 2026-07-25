@@ -1,15 +1,15 @@
 %define upstream_name	 DateTime-Format-W3CDTF
-%define upstream_version 0.06
+%define upstream_version 0.08
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Parse and format W3CDTF datetime strings
 License:	GPL
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/RPM4/
-Source0:	%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://github.com/kasei/datetime-format-w3cdtf
+Source0:	https://cpan.metacpan.org/authors/id/G/GW/GWILLIAMS/DateTime-Format-W3CDTF-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
