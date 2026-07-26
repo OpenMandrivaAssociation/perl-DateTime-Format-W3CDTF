@@ -1,15 +1,13 @@
 %define upstream_name	 DateTime-Format-W3CDTF
-%define upstream_version 0.08
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.08
+Release:	2
 
 Summary:	Parse and format W3CDTF datetime strings
 License:	GPL
 Group:		Development/Perl
 Url:		https://github.com/kasei/datetime-format-w3cdtf
-Source0:	https://cpan.metacpan.org/authors/id/G/GW/GWILLIAMS/DateTime-Format-W3CDTF-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/G/GW/GWILLIAMS/DateTime-Format-W3CDTF-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -25,7 +23,7 @@ It can be used to parse these formats in order to create the appropriate
 objects.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -58,9 +56,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 0.40.0-1mdv2010.0
 + Revision: 406975
-- rebuild using %%perl_convert_version
-
-* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.04-6mdv2009.0
+- rebuild using %0.08 Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.04-6mdv2009.0
 + Revision: 256560
 - rebuild
 
